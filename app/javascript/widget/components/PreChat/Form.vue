@@ -61,10 +61,8 @@
       <input type="radio" value="Domain Names" v-model="message" />
       <label>Domain Names</label><br>
       <input type="radio" value="Other Services" v-model="message" />
-      <label>Other Services</label><br>
-      <br>
-    <div class="mb-2 text-xs font-medium text-black-800">Selected: <strong>{{ message }}</strong></div>
-  </div>
+      <label>Other Services</label>
+    </div>
 
     <custom-button
       class="font-medium my-5"
@@ -140,12 +138,6 @@ export default {
       emailAddress: '',
       message: '',
       phoneNumber: '',
-      options: [
-          { item: 'A', name: 'Option A' },
-          { item: 'B', name: 'Option B' },
-          { item: 'C', name: 'Option C'},
-          { item: 'D', name: 'Option D' }
-        ],
 
     };
   },
