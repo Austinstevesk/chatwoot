@@ -43,6 +43,7 @@
     "js-cookie": "^2.2.1",
     "lodash.groupby": "^4.6.0",
     "marked": "2.0.3",
+    "maz-ui": "^2.3.13",
     "md5": "^2.3.0",
     "ninja-keys": "^1.1.9",
     "posthog-js": "^1.13.7",
@@ -71,7 +72,8 @@
     "vuedraggable": "^2.24.3",
     "vuelidate": "0.7.6",
     "vuex": "~2.1.1",
-    "vuex-router-sync": "~4.1.2"
+    "vuex-router-sync": "~4.1.2",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@babel/core": "7.13.16",

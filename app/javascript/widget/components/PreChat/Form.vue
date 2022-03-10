@@ -34,19 +34,11 @@
       "
     />
 
-    <form-input
-      v-if="options.requireEmail"
-      v-model="phoneNumber"
-      class="mt-5"
-      :label="$t('PRE_CHAT_FORM.FIELDS.PHONE_NUMBER.LABEL')"
-      :placeholder="$t('PRE_CHAT_FORM.FIELDS.PHONE_NUMBER.PLACEHOLDER')"
-      type="text"
-      :error="
-        $v.phoneNumber.$error
-          ? $t('PRE_CHAT_FORM.FIELDS.PHONE_NUMBER.ERROR')
-          : ''
-      "
-    />
+    <div class="mt-2 text-xs font-medium text-black-800">Phone Number</div>
+
+
+    <MazPhoneNumberInput default-country-code="KE" v-model="phoneNumber" required/>
+
     
     <br>
     <div class="mb-2 text-xs font-medium text-black-800">What are you interested In?</div>
@@ -87,12 +79,17 @@ import { getContrastingTextColor } from '@chatwoot/utils';
 import { required, minLength, email } from 'vuelidate/lib/validators';
 import { isEmptyObject } from 'widget/helpers/utils';
 import routerMixin from 'widget/mixins/routerMixin';
+import MazPhoneNumberInput from "maz-ui/lib/maz-phone-number-input";
+import "maz-ui/lib/css/base.css";
+import "maz-ui/lib/css/maz-phone-number-input.css";
+
 export default {
   components: {
     FormInput,
     FormTextArea,
     CustomButton,
     Spinner,
+    MazPhoneNumberInput,
   },
   mixins: [routerMixin],
   props: {
@@ -172,7 +169,7 @@ export default {
       this.$emit('submit', {
         fullName: this.fullName,
         emailAddress: this.emailAddress,
-        message: this.message,
+        message: "Hello there, this is " + this.fullName + ". I checked out your products and I am interested in " + this.message,
         phoneNumber: this.phoneNumber,
         activeCampaignId: this.activeCampaign.id,
       });
