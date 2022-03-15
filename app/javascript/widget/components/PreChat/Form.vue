@@ -44,17 +44,29 @@
     <div class="mb-2 text-xs font-medium text-black-800">What are you interested In?</div>
     
     <div id="radio" class="mb-2 text-xs font-medium text-black-800">
-      <input type="radio" value="Business Intelligence" v-model="message" />
+      <input type="radio" value="Business Intelligence" v-model="message" @click="showtext=false"/>
       <label>Business Intelligence</label><br>
-      <input type="radio" value="Web Design" v-model="message" />
-      <label>Web Design</label><br>
-      <input type="radio" value="Web Development" v-model="message" />
-      <label>Web Development</label><br>
-      <input type="radio" value="Domain Names" v-model="message" />
+      <input type="radio" value="Web Applications" v-model="message" @click="showtext=false"/>
+      <label>Web Applications</label><br>
+      <input type="radio" value="Web Hosting" v-model="message" @click="showtext=false"/>
+      <label>Web Hosting</label><br>
+      <input type="radio" value="Domain Names" v-model="message" @click="showtext=false"/>
       <label>Domain Names</label><br>
-      <input type="radio" value="Other Services" v-model="message" />
+      <input type="radio" value="Managed Databases" v-model="message" @click="showtext=false"/>
+      <label>Managed Databases</label><br>
+      <input type="radio" value="Support" v-model="message" @click="showtext=false"/>
+      <label>Support</label><br>
+      <input type="radio" v-model="message" @click="showtext=true" />
       <label>Other Services</label>
     </div>
+
+    <br>
+
+    <div v-if="showtext">
+      <textarea class="border-rounded w-full" id="service" rows="3" 
+       placeholder="Please enter your service description" v-model="message"></textarea>
+    </div>
+
 
     <custom-button
       class="font-medium my-5"
