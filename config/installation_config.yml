@@ -11,7 +11,7 @@
 - name: WIDGET_BRAND_URL
   value: 'https://www.ndovucloud.com'
 - name: BRAND_NAME
-  value: 'Chatwoot'
+  value: 'Ndovuchatwoot'
 - name: TERMS_URL
   value: 'https://www.ndovucloud.comterms-of-service'
 - name: PRIVACY_URL
