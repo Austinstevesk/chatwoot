@@ -48,10 +48,6 @@
       <label>Business Intelligence</label><br>
       <input type="radio" value="Web Applications" v-model="message" @click="showtext=false"/>
       <label>Web Applications</label><br>
-      <input type="radio" value="Web Hosting" v-model="message" @click="showtext=false"/>
-      <label>Web Hosting</label><br>
-      <input type="radio" value="Domain Names" v-model="message" @click="showtext=false"/>
-      <label>Domain Names</label><br>
       <input type="radio" value="Managed Databases" v-model="message" @click="showtext=false"/>
       <label>Managed Databases</label><br>
       <input type="radio" value="Support" v-model="message" @click="showtext=false"/>
@@ -67,9 +63,9 @@
        placeholder="Please enter your service description" v-model="message"></textarea>
     </div>
 
-
+   
     <custom-button
-      class="font-medium my-5"
+      class="font-medium my-5 border-radius:12px!important"
       block
       :bg-color="widgetColor"
       :text-color="textColor"
