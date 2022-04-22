@@ -293,7 +293,7 @@ export default {
 }
 
 .last-message-icon {
-  color: var(--s-600);
+  color: var(--s-650);
 }
 
 .conversation--metadata {
